@@ -20,6 +20,9 @@ Route::get('/listings/new', [ListingController::class, 'create'])->name('listing
 Route::post('/listings', [ListingController::class, 'store'])->name('listings.store')->middleware('auth');
 
 
+Route::get('/listing/{id}/edit', [ListingController::class, 'edit'])->name('listing.edit');
+Route::put('/listing/{id}/update', [ListingController::class, 'update'])->name('listing.update');
+
 Route::get('/signup', [UserController::class, 'showSignupForm'])->name('signup');
 Route::post('/user/create', [UserController::class, 'register'])->name('user.register');
 Route::get('/login', [UserController::class, 'showLoginForm'])->name('login');
