@@ -1,3 +1,13 @@
+@extends('/layouts/main')
+
+@section('body-section')
+
+<div class="row">
+    <div class="col-8 offset-2">
+        <br>
+        <h1>Edit Your Listing</h1>
+
+
 <form method="post" action="{{ route('listing.update', $listing->id) }}" class="needs-validation" novalidate enctype="multipart/form-data">
     @csrf
     @method('PUT') <!-- This is to ensure it's treated as a PUT request for updating -->
@@ -39,3 +49,8 @@
     
     <button class="btn mb-3 edit-btn">Update Listing</button>
 </form>
+
+</div>
+</div>
+
+@endsection

@@ -9,10 +9,10 @@
 <div class="container">
     <div class="row mt-3">
         <div class="col-lg-8 col-md-10 col-12 mx-auto">
-            <h1>{{ $listing->title }}</h1>
+            <h1 class="text-center">{{ $listing->title }}</h1>
         </div>
         <div class="card border-0 col-lg-6 col-md-8 col-12 mx-auto mt-3">
-            <img class="mt-2 rounded-2" src="{{ asset('storage/' . $listing->image) }}" alt="Listing Image">
+            <img class="mt-2 rounded-2" src="{{ asset('storage/' . $listing->image) }}" alt="Listing Image" style="height: 400px;width:500px; object-fit:  center;">
             <div class="card-body">
                 <p class="card-text">
                     <b><i>Owner's Username: {{ $listing->owner->name }}</i></b><br>
@@ -29,7 +29,7 @@
     @if ($isOwner)
         <div class="row mt-3 mb-3">
             <div class="col-lg-8 col-md-10 col-12 mx-auto d-flex justify-content-between">
-                <a href="{{ route('listing.edit', $listing->id) }}" class="btn edit-btn">Edit</a>
+                <a href="{{ route('listing.edit', $listing->id) }}" class="btn btn-primary">Edit</a>
                 <form method="POST" action="{{ route('listing.destroy', $listing->id) }}">
                     @csrf
                     @method('DELETE')
