@@ -21,7 +21,6 @@
                     <img src="{{ asset('storage/' . $listing->image) }}" class="card-img-top" alt="{{ $listing->title }}" style="height: 200px; object-fit: cover;">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-center">{{ $listing->title }}</h5>
-                        <p class="card-text text-muted text-truncate" style="max-height: 60px;">{{ $listing->description }}</p>
                         <div class="mt-auto">
                             <p class="mb-2"><strong>Price:</strong> ${{ $listing->price }} <i class="tex-info">&nbsp; +10% GST</i></p>
                             <p class="mb-3"><strong>Location:</strong> {{ $listing->location }}, {{ $listing->country }}</p>

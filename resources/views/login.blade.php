@@ -15,18 +15,23 @@
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
-                <div class="invalid-feedback">
-                    Please enter your email.
+                <div class="text-danger">
+                    @error('email')
+                    {{$message}}
+                @enderror
                 </div>
+            
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
-                <div class="invalid-feedback">
-                    Please enter your password.
+                <div class="text-danger">
+                    @error('email')
+                    {{$message}}
+                @enderror
                 </div>
             </div>
-            <button type="submit" class="btn btn-airbnb w-100 ">Login</button>
+            <button type="submit" class="btn btn-airbnb w-100 edit-btn">Login</button>
             <div class="text-center mt-3">
                 <small>Don't have an account? <a href="./signup.html" style="color: #FF385C;">Sign up</a></small>
             </div>

@@ -29,7 +29,7 @@
     @if ($isOwner)
         <div class="row mt-3 mb-3">
             <div class="col-lg-8 col-md-10 col-12 mx-auto d-flex justify-content-between">
-                <a href="{{ route('listing.edit', $listing->id) }}" class="btn btn-primary">Edit</a>
+                <a href="{{ route('listing.edit', $listing->id) }}" class="btn edit-btn">Edit</a>
                 <form method="POST" action="{{ route('listing.destroy', $listing->id) }}">
                     @csrf
                     @method('DELETE')

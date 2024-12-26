@@ -15,32 +15,40 @@
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
                 <input type="text" id="username" name="username" class="form-control" placeholder="Enter your username" required>
-                <div class="invalid-feedback">
-                    Please enter your username.
+                <div class="text-danger">
+                    @error('username')
+                    {{$message}}
+                @enderror
                 </div>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
-                <div class="invalid-feedback">
-                    Please enter your email.
+                <div class="text-danger">
+                    @error('username')
+                    {{$message}}
+                @enderror
                 </div>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
-                <div class="invalid-feedback">
-                    Please enter your password.
+                <div class="text-danger">
+                    @error('password')
+                    {{$message}}
+                @enderror
                 </div>
             </div>
             <div class="mb-3">
                 <label for="password_confirmation" class="form-label">Confirm Password</label>
                 <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" placeholder="Confirm your password" required>
-                <div class="invalid-feedback">
-                    Please confirm your password.
+                <div class="text-danger">
+                    @error('password_confirmation')
+                    {{$message}}
+                @enderror
                 </div>
             </div>
-            <button type="submit" class="btn btn-airbnb w-100">Sign Up</button>
+            <button type="submit" class="btn btn-airbnb w-100 edit-btn">Sign Up</button>
         </form>
         
     </div>
